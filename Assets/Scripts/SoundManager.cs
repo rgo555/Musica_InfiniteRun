@@ -11,11 +11,12 @@ public class SoundManager : MonoBehaviour
     void Awake()
     {
         controlAudio = GetComponent<AudioSource>();
+        Singleton.Instance.PlaySound(clipToPlay);
     }
 
     public void SeleccionAudio (int indice)
     {
         controlAudio.clip = audios[indice];
-        controlAudio.Play();
+        controlAudio.Play(); 
     }
 }
